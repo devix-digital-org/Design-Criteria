@@ -5119,14 +5119,29 @@ svg {
   background-color: var(--color-gray-200);
 }
 
-.info-wrap {
+.info .container {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
 }
 
-.info-image {
+.info-wrap {
   width: 640rem;
+}
+
+.info-title {
+  margin-bottom: 24rem;
+}
+
+.info-title h2 {
+  margin-bottom: 24rem;
+  color: var(--color-secondary-1);
+}
+
+.info-title p {
+  color: var(--color-gray-700);
+}
+
+.info-image {
   height: 448rem;
   border-radius: 4rem;
   overflow: hidden;
@@ -5139,61 +5154,50 @@ svg {
      object-fit: cover;
 }
 
-.info-desc {
-  max-width: 528rem;
+.info-paypal {
+  width: 528rem;
   margin: 0 0 0 auto;
-  /* PayPal */
 }
 
-.info-desc h2 {
-  margin-bottom: 24rem;
-  color: var(--color-secondary-1);
-}
-
-.info-desc p,
-.info-desc label {
+.info-paypal p,
+.info-paypal label {
   color: var(--color-gray-700);
 }
 
-.info-desc-wrap {
-  margin-bottom: 24rem;
-}
-
-.info-desc #paypal-container-R3GNXRRXPVGRE #paypal-form-fields-container-R3GNXRRXPVGRE {
-  position: relative;
-}
-
-.info-desc #paypal-container-R3GNXRRXPVGRE #paypal-form-fields-container-R3GNXRRXPVGRE #desc-label {
+.info-paypal #paypal-container-R3GNXRRXPVGRE #desc-label {
   font: var(--font-h3);
+  color: var(--color-secondary-1);
 }
 
-.info-desc #paypal-container-R3GNXRRXPVGRE #paypal-form-fields-container-R3GNXRRXPVGRE #price-label {
+.info-paypal #paypal-container-R3GNXRRXPVGRE #price-label {
   font: var(--font-h2);
+  color: var(--color-secondary-1);
 }
 
-.info-desc #paypal-container-R3GNXRRXPVGRE #paypal-form-fields-container-R3GNXRRXPVGRE .input-label {
+.info-paypal #paypal-container-R3GNXRRXPVGRE .input-label {
   font: var(--font-body-m);
 }
 
-.info-desc #paypal-container-R3GNXRRXPVGRE #paypal-form-fields-container-R3GNXRRXPVGRE #quantity {
+.info-paypal #paypal-container-R3GNXRRXPVGRE #quantity {
   width: 100%;
+  height: 100%;
   max-width: 224rem;
   font: var(--font-body-xl);
-  color: var(--color-secondary-1);
   padding: 0 0 7rem 0;
   border: 0;
   border-radius: 0;
   border-bottom: 1rem var(--color-gray-800) solid;
+  color: var(--color-secondary-1);
   background-color: transparent;
   transition: border-color var(--transition-duration) var(--transition-easing);
 }
 
-.info-desc #paypal-container-R3GNXRRXPVGRE #paypal-form-fields-container-R3GNXRRXPVGRE #quantity:hover,
-.info-desc #paypal-container-R3GNXRRXPVGRE #paypal-form-fields-container-R3GNXRRXPVGRE #quantity:focus {
+.info-paypal #paypal-container-R3GNXRRXPVGRE #quantity:hover,
+.info-paypal #paypal-container-R3GNXRRXPVGRE #quantity:focus {
   border-color: var(--color-white);
 }
 
-.info-desc #paypal-container-R3GNXRRXPVGRE #paypal-form-fields-container-R3GNXRRXPVGRE #total {
+.info-paypal #paypal-container-R3GNXRRXPVGRE #total {
   font: var(--font-h4);
   color: var(--color-secondary-1);
 }
@@ -9786,46 +9790,43 @@ svg {
     padding-bottom: 272rem;
   }
 
-  .info-desc #paypal-container-R3GNXRRXPVGRE #paypal-form-fields-container-R3GNXRRXPVGRE #desc-label {
-    font: var(--font-h3-mobile);
-  }
-
-  .info-desc #paypal-container-R3GNXRRXPVGRE #paypal-form-fields-container-R3GNXRRXPVGRE #price-label {
-    font: var(--font-h2-mobile);
-  }
-
-  .info-desc #paypal-container-R3GNXRRXPVGRE #paypal-form-fields-container-R3GNXRRXPVGRE .input-label {
-    font: var(--font-body-m-mobile);
-  }
-
-  .info-desc #paypal-container-R3GNXRRXPVGRE #paypal-form-fields-container-R3GNXRRXPVGRE #quantity {
-    font: var(--font-body-xl-mobile);
-  }
-
-  .info-desc #paypal-container-R3GNXRRXPVGRE #paypal-form-fields-container-R3GNXRRXPVGRE #total {
-    font: var(--font-h4-mobile);
-  }
-
-  .info-wrap {
+  .info .container {
     flex-direction: column;
   }
 
-  .info-media {
+  .info-wrap {
+    width: 100%;
     margin-bottom: 47rem;
   }
 
   .info-image {
-    width: 312rem;
+    width: 100%;
     height: 224rem;
   }
 
-  .info-desc {
-    max-width: 528rem;
-    margin: 0 0 0 auto;
+  .info-paypal {
+    width: 100%;
   }
 
-  .info-desc h2 {
-    margin-bottom: 24rem;
+  .info-paypal #paypal-container-R3GNXRRXPVGRE #desc-label {
+    font: var(--font-h3-mobile);
+  }
+
+  .info-paypal #paypal-container-R3GNXRRXPVGRE #price-label {
+    font: var(--font-h2-mobile);
+  }
+
+  .info-paypal #paypal-container-R3GNXRRXPVGRE .input-label {
+    font: var(--font-body-m-mobile);
+  }
+
+  .info-paypal #paypal-container-R3GNXRRXPVGRE #quantity {
+    font: var(--font-body-xl-mobile);
+    max-width: 124rem;
+  }
+
+  .info-paypal #paypal-container-R3GNXRRXPVGRE #total {
+    font: var(--font-h4-mobile);
   }
 
   .why-item {

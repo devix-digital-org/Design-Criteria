@@ -8,6 +8,7 @@ import { scrollTo } from "../../common/scrollTo.js"
 import { initModal, initModalSearch } from "../../modules/modal/initModal.js"
 import { chooseHeaderColor } from "../../common/headerColor.js"
 import { currentDate } from "../../common/currentDate.js"
+import { runPaypalScript } from "../../common/runPaypal.js"
 
 class DefaultRenderer extends Highway.Renderer {
     onEnter() {
@@ -17,6 +18,7 @@ class DefaultRenderer extends Highway.Renderer {
         initHeroCarousel()
         initModalSearch()
         currentDate()
+        runPaypalScript()
     }
     onEnterCompleted() {
         loadContent()

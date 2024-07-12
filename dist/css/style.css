@@ -5142,6 +5142,7 @@ svg {
 .info-desc {
   max-width: 528rem;
   margin: 0 0 0 auto;
+  /* PayPal */
 }
 
 .info-desc h2 {
@@ -5149,8 +5150,52 @@ svg {
   color: var(--color-secondary-1);
 }
 
-.info-desc p {
+.info-desc p,
+.info-desc label {
   color: var(--color-gray-700);
+}
+
+.info-desc-wrap {
+  margin-bottom: 24rem;
+}
+
+.info-desc #paypal-container-R3GNXRRXPVGRE #paypal-form-fields-container-R3GNXRRXPVGRE {
+  position: relative;
+}
+
+.info-desc #paypal-container-R3GNXRRXPVGRE #paypal-form-fields-container-R3GNXRRXPVGRE #desc-label {
+  font: var(--font-h3);
+}
+
+.info-desc #paypal-container-R3GNXRRXPVGRE #paypal-form-fields-container-R3GNXRRXPVGRE #price-label {
+  font: var(--font-h2);
+}
+
+.info-desc #paypal-container-R3GNXRRXPVGRE #paypal-form-fields-container-R3GNXRRXPVGRE .input-label {
+  font: var(--font-body-m);
+}
+
+.info-desc #paypal-container-R3GNXRRXPVGRE #paypal-form-fields-container-R3GNXRRXPVGRE #quantity {
+  width: 100%;
+  max-width: 224rem;
+  font: var(--font-body-xl);
+  color: var(--color-secondary-1);
+  padding: 0 0 7rem 0;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1rem var(--color-gray-800) solid;
+  background-color: transparent;
+  transition: border-color var(--transition-duration) var(--transition-easing);
+}
+
+.info-desc #paypal-container-R3GNXRRXPVGRE #paypal-form-fields-container-R3GNXRRXPVGRE #quantity:hover,
+.info-desc #paypal-container-R3GNXRRXPVGRE #paypal-form-fields-container-R3GNXRRXPVGRE #quantity:focus {
+  border-color: var(--color-white);
+}
+
+.info-desc #paypal-container-R3GNXRRXPVGRE #paypal-form-fields-container-R3GNXRRXPVGRE #total {
+  font: var(--font-h4);
+  color: var(--color-secondary-1);
 }
 
 .why {
@@ -9739,6 +9784,26 @@ svg {
 
   .capabilities.bg-white .capabilities-wrap {
     padding-bottom: 272rem;
+  }
+
+  .info-desc #paypal-container-R3GNXRRXPVGRE #paypal-form-fields-container-R3GNXRRXPVGRE #desc-label {
+    font: var(--font-h3-mobile);
+  }
+
+  .info-desc #paypal-container-R3GNXRRXPVGRE #paypal-form-fields-container-R3GNXRRXPVGRE #price-label {
+    font: var(--font-h2-mobile);
+  }
+
+  .info-desc #paypal-container-R3GNXRRXPVGRE #paypal-form-fields-container-R3GNXRRXPVGRE .input-label {
+    font: var(--font-body-m-mobile);
+  }
+
+  .info-desc #paypal-container-R3GNXRRXPVGRE #paypal-form-fields-container-R3GNXRRXPVGRE #quantity {
+    font: var(--font-body-xl-mobile);
+  }
+
+  .info-desc #paypal-container-R3GNXRRXPVGRE #paypal-form-fields-container-R3GNXRRXPVGRE #total {
+    font: var(--font-h4-mobile);
   }
 
   .info-wrap {

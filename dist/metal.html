@@ -361,23 +361,27 @@
             <div class="info-media" data-aos="fade-up">
                 <div class="info-image">
                     <picture>
-                        <source srcset="../../img/home/info-image.webp" type="image/webp">
-                        <source srcset="../../img/home/info-image.png" type="image/png">
-                        <img src="../../img/home/info-image.png" alt="info-image">
+                        <source srcset="../../img/home/info-image.webp" type="image/webp" />
+                        <source srcset="../../img/home/info-image.png" type="image/png" />
+                        <img src="../../img/home/info-image.png" alt="info-image" />
                     </picture>
                 </div>
             </div>
             <div class="info-desc" data-aos="fade-up">
-                <h2>
-                    Explore the Depths of Sound
-                </h2>
-                <p>
-                    Dive into the extraordinary world of Metal Marshmallow Contact Mics, where innovation meets sonic exploration. Our cutting-edge contact microphones redefine how you experience sound, turning ordinary into extraordinary.
-                </p>
+                <div class="info-desc-wrap">
+                    <h2>Explore the Depths of Sound</h2>
+                    <p>
+                        Dive into the extraordinary world of Metal Marshmallow Contact Mics, where
+                        innovation meets sonic exploration. Our cutting-edge contact microphones
+                        redefine how you experience sound, turning ordinary into extraordinary.
+                    </p>
+                </div>
+                <div id="paypal-container-R3GNXRRXPVGRE"></div>
             </div>
         </div>
     </div>
 </section>
+
                     <section class="section why">
     <div class="container">
         <div class="title-section" data-aos="fade-up">
@@ -613,6 +617,15 @@
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
             AOS.init({})
+        </script>
+
+        <script src="https://www.paypal.com/sdk/js?client-id=BAA3tOmpyJhjsgiAD5rqWccBJ5F4iUFV2CkpaGL-Pun0dpOEr9q5lsjoh0y_hfMwreTZmg0sIvWoolxi4U&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
+        <script>
+            paypal
+                .HostedButtons({
+                    hostedButtonId: "R3GNXRRXPVGRE",
+                })
+                .render("#paypal-container-R3GNXRRXPVGRE")
         </script>
     </body>
 </html>

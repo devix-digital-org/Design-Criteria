@@ -12,16 +12,26 @@ export function runPaypalScript() {
 }
 
 function initializePaypal() {
-    paypal
-        .HostedButtons({
-            hostedButtonId: "R3GNXRRXPVGRE",
-        })
-        .render("#paypal-container-R3GNXRRXPVGRE")
+    if (typeof paypal !== "undefined" && paypal.HostedButtons) {
+        paypal
+            .HostedButtons({
+                hostedButtonId: "A88SZH49FWZXQ",
+            })
+            .render("#paypal-container-A88SZH49FWZXQ")
+            .catch((err) => {
+                console.error("Помилка при рендерингу PayPal кнопки:", err)
+            })
+    } else {
+        console.error("PayPal HostedButtons не знайдено.")
+    }
 }
 
 function loadScript(src, callback) {
     const script = document.createElement("script")
     script.src = src
     script.onload = callback
+    script.onerror = () => {
+        console.error("Не вдалося завантажити скрипт:", src)
+    }
     document.head.appendChild(script)
 }

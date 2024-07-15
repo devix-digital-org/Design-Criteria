@@ -5164,21 +5164,21 @@ svg {
   color: var(--color-gray-700);
 }
 
-.info-paypal #paypal-container-R3GNXRRXPVGRE #desc-label {
+.info-paypal #paypal-container-A88SZH49FWZXQ #desc-label {
   font: var(--font-h3);
   color: var(--color-secondary-1);
 }
 
-.info-paypal #paypal-container-R3GNXRRXPVGRE #price-label {
+.info-paypal #paypal-container-A88SZH49FWZXQ #price-label {
   font: var(--font-h2);
   color: var(--color-secondary-1);
 }
 
-.info-paypal #paypal-container-R3GNXRRXPVGRE .input-label {
+.info-paypal #paypal-container-A88SZH49FWZXQ .input-label {
   font: var(--font-body-m);
 }
 
-.info-paypal #paypal-container-R3GNXRRXPVGRE #quantity {
+.info-paypal #paypal-container-A88SZH49FWZXQ #quantity {
   width: 100%;
   height: 100%;
   max-width: 224rem;
@@ -5192,12 +5192,12 @@ svg {
   transition: border-color var(--transition-duration) var(--transition-easing);
 }
 
-.info-paypal #paypal-container-R3GNXRRXPVGRE #quantity:hover,
-.info-paypal #paypal-container-R3GNXRRXPVGRE #quantity:focus {
+.info-paypal #paypal-container-A88SZH49FWZXQ #quantity:hover,
+.info-paypal #paypal-container-A88SZH49FWZXQ #quantity:focus {
   border-color: var(--color-white);
 }
 
-.info-paypal #paypal-container-R3GNXRRXPVGRE #total {
+.info-paypal #paypal-container-A88SZH49FWZXQ #total {
   font: var(--font-h4);
   color: var(--color-secondary-1);
 }
@@ -9808,24 +9808,24 @@ svg {
     width: 100%;
   }
 
-  .info-paypal #paypal-container-R3GNXRRXPVGRE #desc-label {
+  .info-paypal #paypal-container-A88SZH49FWZXQ #desc-label {
     font: var(--font-h3-mobile);
   }
 
-  .info-paypal #paypal-container-R3GNXRRXPVGRE #price-label {
+  .info-paypal #paypal-container-A88SZH49FWZXQ #price-label {
     font: var(--font-h2-mobile);
   }
 
-  .info-paypal #paypal-container-R3GNXRRXPVGRE .input-label {
+  .info-paypal #paypal-container-A88SZH49FWZXQ .input-label {
     font: var(--font-body-m-mobile);
   }
 
-  .info-paypal #paypal-container-R3GNXRRXPVGRE #quantity {
+  .info-paypal #paypal-container-A88SZH49FWZXQ #quantity {
     font: var(--font-body-xl-mobile);
     max-width: 124rem;
   }
 
-  .info-paypal #paypal-container-R3GNXRRXPVGRE #total {
+  .info-paypal #paypal-container-A88SZH49FWZXQ #total {
     font: var(--font-h4-mobile);
   }
 

@@ -17,7 +17,7 @@ function initializePaypal() {
             .HostedButtons({
                 hostedButtonId: "A88SZH49FWZXQ",
             })
-            .render("#paypal-container-A88SZH49FWZXQ")
+            .render("#paypal-container")
             .catch((err) => {
                 console.error("Помилка при рендерингу PayPal кнопки:", err)
             })

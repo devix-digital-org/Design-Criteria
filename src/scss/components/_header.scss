@@ -452,9 +452,10 @@
                     border-top: 1rem solid var(--color-white-20);
                     top: -200vh;
                     transition: all ease 300ms;
-
-                    ul {
+                    > ul {
                         margin-top: 40rem;
+                    }
+                    ul {
                         flex-direction: column;
                         align-items: center;
                         li {
@@ -478,6 +479,12 @@
                                         opacity: 0;
                                         visibility: hidden;
                                         z-index: -1;
+                                        a {
+                                            &:hover,
+                                            &.active {
+                                                background: none;
+                                            }
+                                        }
                                     }
                                     a,
                                     p {
@@ -505,7 +512,6 @@
                                 .sub-menu {
                                     background-color: transparent;
                                     width: 100%;
-                                    max-width: 230rem;
                                     li {
                                         margin-bottom: 8rem;
                                         a {

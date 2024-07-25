@@ -8759,8 +8759,11 @@ svg {
     transition: all ease 300ms;
   }
 
-  .header-panel-nav nav ul {
+  .header-panel-nav nav > ul {
     margin-top: 40rem;
+  }
+
+  .header-panel-nav nav ul {
     flex-direction: column;
     align-items: center;
   }
@@ -8788,6 +8791,11 @@ svg {
     opacity: 0;
     visibility: hidden;
     z-index: -1;
+  }
+
+  .header-panel-nav nav ul li.menu-item-has-children:hover .sub-menu a:hover,
+  .header-panel-nav nav ul li.menu-item-has-children:hover .sub-menu a.active {
+    background: none;
   }
 
   .header-panel-nav nav ul li.menu-item-has-children:hover a,
@@ -8820,7 +8828,6 @@ svg {
   .header-panel-nav nav ul li.menu-item-has-children .sub-menu {
     background-color: transparent;
     width: 100%;
-    max-width: 230rem;
   }
 
   .header-panel-nav nav ul li.menu-item-has-children .sub-menu li {

@@ -34,6 +34,9 @@
                 margin-bottom: 24rem;
                 &:nth-of-type(2) {
                     padding-left: 18rem;
+                    @include maxWidth($sm) {
+                        padding-left: 0;
+                    }
                 }
             }
             &-list {

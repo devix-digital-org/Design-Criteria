@@ -197,6 +197,9 @@
             }
         }
         &-search {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             background: transparent;
             border: 0;
             outline: none;
@@ -594,6 +597,28 @@
                     }
                     &-overlay {
                         background-color: var(--color-white);
+                    }
+                }
+                &-panel {
+                    &-nav {
+                        nav {
+                            ul {
+                                li {
+                                    &.menu-item-has-children {
+                                        .sub-menu {
+                                            li {
+                                                a {
+                                                    .sub-item-title {
+                                                        color: var(--color-secondary-1);
+                                                        font: var(--font-h6);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }

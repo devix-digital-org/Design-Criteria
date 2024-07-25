@@ -54,13 +54,13 @@
         margin-bottom: 48rem;
         max-width: 400rem;
     }
-    &-link {
-    }
 
     &.hero-main {
         position: sticky;
         height: 100vh;
         overflow: hidden;
+        background-image: url("../img/home/hero-bg.webp");
+        background-position: center;
         &:before,
         &:after {
             position: absolute;
@@ -601,11 +601,18 @@
             height: 272.24rem;
         }
         &-subtitle {
+            width: 100%;
             margin-bottom: 8rem;
         }
         &-text {
             font: var(--font-body-m-mobile);
             margin-bottom: 32rem;
+        }
+        &.hero-main {
+            background-image: url("../img/home/hero-bg-mob.webp");
+            .hero-media {
+                bottom: 0;
+            }
         }
         &.hero-product {
             padding: 100rem 0 0;

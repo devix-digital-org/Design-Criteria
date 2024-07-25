@@ -9042,6 +9042,11 @@ svg {
     flex-direction: column;
   }
 
+  .footer-bottom-nav {
+    width: 100%;
+    justify-content: center;
+  }
+
   .footer-bottom-nav li,
   .footer-bottom-nav a {
     font: var(--font-body-xs-mobile);

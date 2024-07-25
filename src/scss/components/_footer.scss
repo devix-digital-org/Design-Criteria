@@ -185,6 +185,9 @@
             align-items: center;
             flex-direction: column;
             &-nav {
+                width: 100%;
+                justify-content: center;
+
                 li,
                 a {
                     font: var(--font-body-xs-mobile);

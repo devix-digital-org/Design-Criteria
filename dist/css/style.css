@@ -3423,7 +3423,6 @@ svg {
   position: sticky;
   height: 100vh;
   overflow: hidden;
-  background-image: url("../img/home/hero-bg.webp");
   background-position: center;
 }
 
@@ -9166,10 +9165,6 @@ svg {
   .hero-text {
     font: var(--font-body-m-mobile);
     margin-bottom: 32rem;
-  }
-
-  .hero.hero-main {
-    background-image: url("../img/home/hero-bg-mob.webp");
   }
 
   .hero.hero-main .hero-media {

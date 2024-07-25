@@ -59,7 +59,6 @@
         position: sticky;
         height: 100vh;
         overflow: hidden;
-        background-image: url("../img/home/hero-bg.webp");
         background-position: center;
         &:before,
         &:after {
@@ -609,7 +608,6 @@
             margin-bottom: 32rem;
         }
         &.hero-main {
-            background-image: url("../img/home/hero-bg-mob.webp");
             .hero-media {
                 bottom: 0;
             }

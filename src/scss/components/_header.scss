@@ -452,14 +452,16 @@
                     border-top: 1rem solid var(--color-white-20);
                     top: -200vh;
                     transition: all ease 300ms;
+
                     ul {
+                        margin-top: 40rem;
                         flex-direction: column;
                         align-items: center;
                         li {
                             &:first-of-type {
                                 border-left: 0;
                                 a {
-                                    padding: 56rem 16rem 16rem;
+                                    padding: 16rem;
                                 }
                             }
                             a,

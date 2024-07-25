@@ -9935,6 +9935,33 @@ svg {
   }
 }
 
+@media (max-height: 730px) and (min-width: 500px) and (max-width: 767px) {
+  .header-panel-nav nav > ul {
+    margin-top: 16rem;
+  }
+
+  .header-panel-nav nav ul a,
+  .header-panel-nav nav ul p {
+    font: var(--font-h3-mobile);
+  }
+
+  .header-panel-nav nav ul li a,
+  .header-panel-nav nav ul li p,
+  .header-panel-nav nav ul li:first-of-type a,
+  .header-panel-nav nav ul li:first-of-type p {
+    padding: 8rem;
+  }
+
+  .header-panel-nav nav ul li .sub-menu,
+  .header-panel-nav nav ul li:first-of-type .sub-menu {
+    padding: 0;
+  }
+
+  .header.active .header-panel .btn-primary {
+    bottom: 16rem;
+  }
+}
+
 @media print {
   .d-print-none {
     display: none !important;

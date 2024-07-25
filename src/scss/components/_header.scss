@@ -434,6 +434,44 @@
         min-height: 59rem;
     }
 }
+
+@media (max-height: 730px) and (min-width: 500px) and (max-width: 767px) {
+    .header {
+        &-panel {
+            &-nav {
+                nav {
+                    > ul {
+                        margin-top: 16rem;
+                    }
+                    ul {
+                        a,
+                        p {
+                            font: var(--font-h3-mobile);
+                        }
+                        li,
+                        li:first-of-type {
+                            a,
+                            p {
+                                padding: 8rem;
+                            }
+                            .sub-menu {
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .header.active {
+        .header-panel {
+            .btn-primary {
+                bottom: 16rem;
+            }
+        }
+    }
+}
+
 @include maxWidth($sm) {
     .header {
         &-panel {
@@ -658,6 +696,7 @@
         }
     }
 }
+
 .search-not-found {
     h6 {
         display: block;

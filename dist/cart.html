@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        />
+        <title>Design Criteria | Iot remote</title>
+
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
+
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="msapplication-navbutton-color" content="#ffffff" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff" />
+
+        <link
+            rel="preload"
+            href="fonts/Inter-Regular.woff"
+            as="font"
+            type="font/woff"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="preload"
+            href="fonts/Inter-Regular.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="preload"
+            href="fonts/Inter-Medium.woff"
+            as="font"
+            type="font/woff"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="preload"
+            href="fonts/Inter-Medium.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="preload"
+            href="fonts/Inter-Bold.woff"
+            as="font"
+            type="font/woff"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="preload"
+            href="fonts/Inter-Bold.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <main class="wrapper" id="wrapper">
+            <header class="header" id="header">
+    <div class="header-panel">
+        <div class="header-panel-logo">
+            <a href="index.html" class="logo">
+                <img class="white-logo" src="img/logo.svg" alt="logo Design Criteria" />
+
+                <img class="dark-logo" src="img/logo-dark.svg" alt="logo Design Criteria" />
+            </a>
+        </div>
+        <div class="header-panel-nav">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html#about" class="scroll-action" data-router-disabled
+                            >About Us</a
+                        >
+                    </li>
+                    <li>
+                        <a href="products.html" class="nav-link">Products</a>
+                    </li>
+                    <li><a href="metal.html" class="nav-link">MM Pro</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li>
+                        <a href="cart.html" class="nav-link nav-link-icon">
+                            <img
+                                class="white-logo nav-link-logo"
+                                src="img/icons/shopping-bag-white.svg"
+                                alt="Cart logo"
+                            />
+                            <img
+                                class="dark-logo nav-link-logo"
+                                src="img/icons/shopping-bag.svg"
+                                alt="Cart logo"
+                            />
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <button type="button" class="header-panel-search">
+                <img class="white-logo" src="img/icons/search.svg" alt="search icon" />
+                <img class="dark-logo" src="img/icons/search-dark.svg" alt="search icon" />
+            </button>
+            <button type="button" class="btn btn-primary" data-modal-open="#contact-modal">
+                contact us
+            </button>
+            <button class="burger header-panel-burger"><span></span></button>
+        </div>
+    </div>
+    <div class="header-panel-overlay"></div>
+    <div class="header-search">
+        <div class="container">
+            <div class="header-search-form">
+                <form>
+                    <label>
+                        <input
+                            type="text"
+                            placeholder="Search"
+                            class="search-field"
+                            id="searchItem"
+                            autocomplete="off"
+                        />
+                    </label>
+                </form>
+            </div>
+            <div class="header-search-result">
+                <ul class="header-search-list">
+                    <li><a href="#">Magnetics Lorem ipsum dolor sit amet consectetur.</a></li>
+                    <li><a href="#">IoT Lorem ipsum dolor sit amet consectetur.</a></li>
+                    <li><a href="#">Power Supplies Lorem ipsum dolor sit amet consectetur.</a></li>
+                </ul>
+            </div>
+            <div class="search-not-found" style="display: none">
+                <h6>No results found for “<span class="search-value"></span>”</h6>
+                <p>Check the spelling or use a different word or phrase.</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+            <div data-router-wrapper>
+                <div data-router-view="default">
+                    <section class="section cart">
+    <!-- for test header theme -->
+    <div data-theme="dark"></div>
+
+    <div class="container">
+        <div class="cart-hero">
+            <h1 class="cart-hero-title h1" data-load-order="1">Shopping Cart</h1>
+            <div class="cart-hero-text" data-load-order="2">
+                Lorem ipsum dolor sit amet consectetur. Sit risus sed integer a at.
+            </div>
+        </div>
+        <div class="cart-empty" data-load-order="3">
+            <h5 class="cart-empty-title">Your cart is currently empty.</h5>
+        </div>
+        <div class="purchase-list" data-load-order="3">
+            <table class="purchase-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-product-id="1">
+                        <td class="purchase-image-wrapper">
+                            <img class="purchase-icon" src="../../img/cart/del.svg" alt="icon" />
+                            <img
+                                class="purchase-image"
+                                src="../../img/cart/image.jpg"
+                                alt="product`s photo"
+                            />
+                        </td>
+                        <td><a href="#" class="purchase-name">Planar Transformers</a></td>
+                        <td class="purchase-price">$1,000.000 <span>$2,000.00</span></td>
+                        <td class="purchase-quantity">
+                            <img
+                                class="qty-minus"
+                                src="../../img/cart/tabler_minus.svg"
+                                alt="icon"
+                            />
+                            <input type="number" value="1" min="1" readonly />
+                            <img class="qty-plus" src="../../img/cart/tabler_plus.svg" alt="icon" />
+                        </td>
+                        <td class="subtotal">$1,000.000</td>
+                    </tr>
+                    <tr data-product-id="2">
+                        <td class="purchase-image-wrapper">
+                            <img class="purchase-icon" src="../../img/cart/del.svg" alt="icon" />
+                            <img
+                                class="purchase-image"
+                                src="../../img/cart/image2.jpg"
+                                alt="product`s photo"
+                            />
+                        </td>
+                        <td><a href="#" class="purchase-name">Current Sense Transformers</a></td>
+                        <td class="purchase-price">$1,000.000 <span>$2,000.00</span></td>
+                        <td class="purchase-quantity update-quantity">
+                            <img
+                                class="qty-minus"
+                                src="../../img/cart/tabler_minus.svg"
+                                alt="icon"
+                            />
+                            <input type="number" value="1" min="1" readonly />
+                            <img class="qty-plus" src="../../img/cart/tabler_plus.svg" alt="icon" />
+                        </td>
+                        <td class="subtotal">$1,000.000</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="purchase-cards" data-load-order="3">
+                <div class="purchase-card" data-product-id="1">
+                    <div class="purchase-image-wrapper">
+                        <img class="purchase-card-icon" src="../../img/cart/del.svg" alt="icon" />
+                        <img
+                            class="purchase-card-image"
+                            src="../../img/cart/image.jpg"
+                            alt="product`s photo"
+                        />
+                    </div>
+                    <div class="purchase-card-details">
+                        <div class="purchase-card-row">
+                            <h6 class="h6">Product</h6>
+                            <a href="#">Planar Transformers</a>
+                        </div>
+                        <div class="purchase-card-row">
+                            <h6 class="h6">Price</h6>
+                            <div class="purchase-card-price">
+                                <p class="current-price">$1,000.00</p>
+                                <span class="original-price">$2,000.00</span>
+                            </div>
+                        </div>
+                        <div class="purchase-card-row">
+                            <h6 class="h6">Quantity</h6>
+                            <div class="purchase-card-quantity">
+                                <img
+                                    class="qty-minus"
+                                    src="../../img/cart/tabler_minus.svg"
+                                    alt="icon"
+                                />
+                                <input type="number" value="1" min="1" readonly />
+                                <img
+                                    class="qty-plus"
+                                    src="../../img/cart/tabler_plus.svg"
+                                    alt="icon"
+                                />
+                            </div>
+                        </div>
+                        <div class="purchase-card-row">
+                            <h6 class="h6">Subtotal</h6>
+                            <p>$1,000.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="purchase-card" data-product-id="2">
+                    <div class="purchase-image-wrapper">
+                        <img class="purchase-card-icon" src="../../img/cart/del.svg" alt="icon" />
+                        <img
+                            class="purchase-card-image"
+                            src="../../img/cart/image2.jpg"
+                            alt="product`s photo"
+                        />
+                    </div>
+                    <div class="purchase-card-details">
+                        <div class="purchase-card-row">
+                            <h6 class="h6">Product</h6>
+                            <a href="#">Current Sense Transformers</a>
+                        </div>
+                        <div class="purchase-card-row">
+                            <h6 class="h6">Price</h6>
+                            <div class="purchase-card-price">
+                                <p class="current-price">$1,000.00</p>
+                            </div>
+                        </div>
+                        <div class="purchase-card-row">
+                            <h6 class="h6">Quantity</h6>
+                            <div class="purchase-card-quantity">
+                                <img
+                                    class="qty-minus"
+                                    src="../../img/cart/tabler_minus.svg"
+                                    alt="icon"
+                                />
+                                <input type="number" value="1" min="1" readonly />
+                                <img
+                                    class="qty-plus"
+                                    src="../../img/cart/tabler_plus.svg"
+                                    alt="icon"
+                                />
+                            </div>
+                        </div>
+                        <div class="purchase-card-row">
+                            <h6 class="h6">Subtotal</h6>
+                            <p>$1,000.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="purchase-bottom">
+                <div class="purchase-coupone">
+                    <input type="text" placeholder="Enter coupon code" />
+                    <button type="button" class="btn btn-line" data-modal-open="#contact-modal">
+                        Apply cupon
+                    </button>
+                </div>
+                <div class="purchase-total">
+                    <div class="purchase-total-info">
+                        <h4 class="purchase-total-text h4">Total</h4>
+                        <p class="purchase-total-number">$2,000.00</p>
+                    </div>
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-modal-open="#contact-modal"
+                    >
+                        Proceed to checkout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script></script>
+
+                    <section class="section contact" style="background-image: url('../../img/home/contact-bg.jpg')">
+    <div class="container">
+        <div class="title-section" data-aos="fade-up">
+            <div class="h6">Ready to find out more?</div>
+            <h2>Build The Future With Us</h2>
+            <p>
+                Collaborate, Create, and Shape Tomorrow: Contact us to develop high-tech circuits
+                and hardware.
+            </p>
+        </div>
+        <div class="link-section" data-aos="fade-up">
+            <button type="button" class="btn btn-secondary" data-modal-open="#contact-modal">
+                contact us
+            </button>
+        </div>
+    </div>
+</section>
+
+                </div>
+            </div>
+            <footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-logo">
+                <a href="index.html"><img src="../img/logo.svg" alt="logo" /></a>
+            </div>
+            <div class="footer-info">
+                <div class="footer-item">
+                    <div class="footer-title">Contact us</div>
+                    <ul class="footer-list">
+                        <li><a href="tel:8013931414" target="_blank">(801) 393-1414</a></li>
+                    </ul>
+                </div>
+                <div class="footer-item">
+                    <div class="footer-title">Address</div>
+                    <ul class="footer-list">
+                        <li>
+                            1821 W 4000 S, Roy, <br />
+                            UT 84067, USA
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-item">
+                    <div class="footer-title">Email</div>
+                    <ul class="footer-list">
+                        <li>
+                            <a href="mailto:power@designcriteria.com" target="_blank"
+                                >power@designcriteria.com</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-nav">
+                <div class="footer-item">
+                    <div class="footer-title">Product</div>
+                    <ul class="footer-list">
+                        <li><a href="power-supplies.html" class="nav-link">Power Supplies</a></li>
+                        <li><a href="magnetics.html" class="nav-link">Magnetics</a></li>
+                        <li><a href="iot-remote.html" class="nav-link">IoT Remote Sensors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-item">
+                    <div class="footer-title">Info</div>
+                    <ul class="footer-list">
+                        <li>
+                            <a href="index.html#about" class="scroll-action" data-router-disabled
+                                >About Us</a
+                            >
+                        </li>
+                        <li><a href="metal.html" class="nav-link">MM Pro</a></li>
+                        <li><a href="blog.html" class="nav-link">Blog</a></li>
+                        <li><a href="#" data-modal-open="#contact-modal">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <ul class="footer-social">
+                <li>
+                    <a href="#" target="_blank" class="footer-social-link"
+                        ><img src="../img/icons/ln.svg" alt="ln"
+                    /></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" class="footer-social-link"
+                        ><img src="../img/icons/yb.svg" alt="yt"
+                    /></a>
+                </li>
+            </ul>
+            <ul class="footer-bottom-nav">
+                <li>© 2023 Design Criteria, Inc.</li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+            <div class="footer-made">
+                <a href="#" target="_blank"><img src="../img/logo-mini.svg" alt="presto" /></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+            <div class="modal" id="contact-modal">
+    <div class="modal-bg"></div>
+    <div class="modal-close" data-modal-close="#contact-modal"></div>
+    <div class="modal-box" data-lenis-prevent>
+        <div class="modal-box-item">
+            <div class="contact-modal">
+                <div class="contact-modal-top">
+                    <h6 class="h6">Use this form to describe your project</h6>
+                    <div class="modal-close-btn" data-modal-close="#contact-modal">
+                        <svg><use xlink:href="img/icons/icons.svg#close"></use></svg>
+                    </div>
+                </div>
+                <div class="contact-modal-form">
+                    <form>
+                        <p class="contact-modal-inner">
+                            Hi, my name is
+                            <label class="field"
+                                ><input
+                                    type="text"
+                                    placeholder="John Smith"
+                                    class="field-item"
+                                    required /></label
+                            >. You can answer me on this email
+                            <label class="field">
+                                <input
+                                    type="email"
+                                    placeholder="email@box.com"
+                                    class="field-item"
+                                    required
+                                />
+                                .
+                            </label>
+                            I am looking for help with a
+                            <label class="field field-select">
+                                <select class="field-item">
+                                    <option value="Power Supplies">Power Supplies</option>
+                                    <option value="Power Supplies">Power Supplies</option>
+                                    <option value="Power Supplies">Power Supplies</option>
+                                    <option value="Power Supplies">Power Supplies</option>
+                                </select>
+                            </label>
+                            .
+                        </p>
+                        <p class="contact-message-inner">
+                            Message
+                            <label class="field">
+                                <span class="field-resize"></span>
+                                <textarea
+                                    placeholder="Type your message..."
+                                    class="field-item"
+                                    required
+                                ></textarea>
+                            </label>
+                        </p>
+                        <button class="btn btn-secondary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <div class="modal" id="thanks">
+	<div class="modal-bg"></div>
+	<div class="modal-close" data-modal-close="#thanks"></div>
+	<div class="modal-box" data-lenis-prevent>
+		<div class="modal-box-item">
+			<div class="thanks">
+				<div class="thanks-top">
+					<h6 class="h6">Use this form to describe your project</h6>
+					<div class="modal-close-btn" data-modal-close="#contact-modal">
+						<svg><use xlink:href="img/icons/icons.svg#close"></use></svg>
+					</div>
+				</div>
+				<div class="thanks-content">
+					<h2 class="h2 thanks-content-title">
+						Thank you! <br> Your submission has <br> been received!
+					</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+        </main>
+        <script src="js/app.min.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({})
+        </script>
+    </body>
+</html>

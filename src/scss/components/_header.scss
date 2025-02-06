@@ -193,6 +193,15 @@
                     p {
                         padding: 23rem 39rem 18rem;
                     }
+                    .nav-link-icon {
+                        padding: 18rem 26rem;
+                        height: 100%;
+
+                        img {
+                            width: 24rem;
+                            height: 24rem;
+                        }
+                    }
                 }
             }
         }
@@ -370,6 +379,20 @@
         }
         .white-logo {
             display: none;
+        }
+
+        .nav-link-icon:hover,
+        .nav-link-icon.active {
+            .dark-logo {
+                display: none;
+            }
+        }
+
+        .nav-link-icon:hover,
+        .nav-link-icon.active {
+            .white-logo {
+                display: block;
+            }
         }
 
         &.active-search {

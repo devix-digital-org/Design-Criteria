@@ -1,0 +1,294 @@
+.cart {
+    background: var(--color-gray-200);
+    &-hero {
+        max-width: 100%;
+        text-align: center;
+        margin: 47rem 0 82rem;
+        &-title {
+            color: var(--color-secondary-1);
+            margin-bottom: 24rem;
+        }
+        &-text {
+            color: var(--color-gray-700);
+            margin-bottom: 0;
+        }
+    }
+
+    .cart-empty {
+        display: none;
+
+        &-title {
+            padding: 60rem 0 120rem;
+            text-align: center;
+            color: var(--color-secondary-1);
+        }
+    }
+
+    .purchase-list {
+        .purchase {
+            &-cards {
+                display: none;
+            }
+
+            &-table {
+                width: 100%;
+                border-collapse: separate;
+                border-spacing: 0 8rem;
+                margin-bottom: 80rem;
+
+                & thead {
+                    background: #eceff6;
+                }
+
+                & tbody {
+                    background: #ffffff;
+                }
+
+                & th,
+                & td {
+                    padding: 0 24rem;
+                    text-align: start;
+                }
+
+                & th {
+                    height: 40rem;
+                }
+
+                & td {
+                    height: 80rem;
+                }
+            }
+
+            &-image-wrapper {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+
+            &-icon {
+                width: 24rem;
+                height: 24rem;
+                cursor: pointer;
+            }
+
+            &-image {
+                width: 128rem;
+                height: 80rem;
+                display: block;
+                padding: 8rem;
+            }
+
+            &-name {
+                text-decoration: underline;
+                color: #5981f0;
+            }
+
+            &-price span {
+                font-size: 12rem;
+                text-decoration: line-through;
+            }
+
+            &-quantity {
+                display: flex;
+                align-items: center;
+                gap: 16rem;
+
+                img {
+                    width: 24rem;
+                    height: 24rem;
+                    cursor: pointer;
+                }
+
+                input {
+                    width: 64rem;
+                    height: 38rem;
+                    font-family: var(--font-family-secondary);
+                    font-size: var(--font-body-s);
+                    text-align: center;
+                    padding-left: 12rem;
+                    border: 1px solid #c1c4cd;
+                    border-radius: 4px;
+                }
+            }
+
+            &-bottom {
+                display: flex;
+                justify-content: space-between;
+            }
+            &-coupone {
+                width: 416rem;
+
+                input {
+                    font-family: var(--font-family-secondary);
+                    width: 220rem;
+                    height: 49rem;
+                    padding: 0 16rem;
+                    border: 1px solid #c1c4cd;
+                    border-radius: 4px;
+                    font-size: 16rem;
+
+                    &::placeholder {
+                        font-size: 16rem;
+                    }
+                }
+
+                .btn {
+                    width: 185rem;
+                    height: 51rem;
+                    min-height: 51rem;
+                    padding: 16rem 36rem;
+                    white-space: nowrap;
+                }
+            }
+            &-total {
+                width: 416rem;
+
+                &-info {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    margin-bottom: 32rem;
+                }
+
+                &-text {
+                    font-weight: 700;
+                }
+                &-number {
+                    font-size: 20rem;
+                }
+
+                .btn {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@include maxWidth($sm) {
+    .cart {
+        .cart-empty {
+            &-title {
+                padding: 20rem 0 120rem;
+            }
+        }
+        .purchase-list {
+            .purchase {
+                &-table {
+                    display: none;
+                }
+
+                &-cards {
+                    width: 100%;
+                    margin-bottom: 40rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 32rem;
+                }
+
+                &-image-wrapper {
+                    position: relative;
+                }
+
+                &-card {
+                    border-radius: 8px;
+                    padding: 8rem 8rem 16rem;
+                    background: #fff;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16rem;
+                    &-icon {
+                        position: absolute;
+                        content: url("../../img/cart/close.svg");
+                        width: 32rem;
+                        height: 32rem;
+                        top: -16rem;
+                        right: -16rem;
+                        cursor: pointer;
+                    }
+
+                    &-image {
+                        width: 100%;
+                        height: 124rem;
+                        padding: 0;
+                    }
+
+                    &-details {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 16rem;
+
+                        h6 {
+                            font-size: 16rem;
+                            font-weight: 700;
+                            color: var(--color-secondary-1);
+                        }
+                        a {
+                            text-decoration: underline;
+                            color: #5981f0;
+                        }
+                    }
+
+                    &-row {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        .current-price {
+                            line-height: 22rem;
+                        }
+                        .original-price {
+                            font-size: 12rem;
+                            text-decoration: line-through;
+                            line-height: 15rem;
+                        }
+                    }
+
+                    &-price {
+                        display: flex;
+                        align-items: flex-end;
+                        gap: 4rem;
+                    }
+
+                    &-quantity {
+                        display: flex;
+                        align-items: center;
+                        gap: 16rem;
+
+                        img {
+                            width: 24rem;
+                            height: 24rem;
+                            cursor: pointer;
+                        }
+
+                        input {
+                            width: 48rem;
+                            height: 38rem;
+                            font-family: var(--font-family-secondary);
+                            font-size: var(--font-body-s);
+                            text-align: center;
+                            border: 1px solid #c1c4cd;
+                            border-radius: 4px;
+                            padding-left: 12rem;
+                        }
+                    }
+                }
+                &-bottom {
+                    flex-direction: column;
+                }
+                &-coupone {
+                    margin-bottom: 40rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12rem;
+                }
+                &-coupone,
+                &-coupone input,
+                &-coupone button,
+                &-total {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

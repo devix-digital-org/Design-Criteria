@@ -1,0 +1,312 @@
+.products {
+    background: var(--color-gray-200);
+    &-hero {
+        max-width: 100%;
+        text-align: center;
+        margin: 47rem 0 82rem;
+        &-title {
+            color: var(--color-secondary-1);
+            margin-bottom: 24rem;
+        }
+        &-text {
+            color: var(--color-gray-700);
+            margin-bottom: 0;
+        }
+    }
+    &-container {
+        display: flex;
+        justify-content: space-between;
+
+        @include maxWidth($sm) {
+            width: 100%;
+            flex-direction: column;
+        }
+    }
+
+    &-list-wrapper {
+        width: 864rem;
+
+        @include maxWidth($sm) {
+            width: 100%;
+            margin-bottom: 32rem;
+        }
+    }
+
+    &-list-top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 32rem;
+        color: var(--color-gray-700);
+
+        select {
+            width: 224rem;
+            padding-bottom: 8rem;
+            border-bottom: 1px solid #656a7c30;
+            font-size: var(--font-body-m);
+            font-family: var(--font-family-secondary);
+            line-height: 24rem;
+            appearance: none;
+            background-image: url("../../img/cart/arrow-down.svg");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            color: var(--color-gray-700);
+            background-color: transparent;
+
+            @include maxWidth($sm) {
+                width: 100%;
+            }
+        }
+
+        div {
+            @include maxWidth($sm) {
+                display: none;
+            }
+        }
+    }
+
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+
+        @include maxWidth($sm) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .products-item {
+            display: flex;
+            flex-direction: column;
+            background: var(--color-white);
+            padding: 8rem 8rem 24rem;
+            border-radius: 8px;
+
+            a {
+                color: inherit;
+            }
+
+            &-media {
+                margin-bottom: 24rem;
+            }
+            &-image {
+                max-width: 100%;
+                height: 256rem;
+            }
+            &-desc {
+                padding: 0 16rem;
+                width: 100%;
+            }
+            &-title {
+                font-weight: 700;
+                margin-bottom: 8rem;
+                color: var(--color-secondary-1);
+            }
+            &-text {
+                max-width: 100%;
+                margin-bottom: 40rem;
+            }
+            &-bottom {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            &-price {
+                display: flex;
+                align-items: center;
+                span {
+                    font-size: 18rem;
+                    font-weight: normal;
+                    text-decoration: line-through;
+                }
+            }
+            &-btn {
+                width: 175rem;
+                height: 59rem;
+                font-size: 16rem;
+                white-space: nowrap;
+            }
+        }
+    }
+    &-filter {
+        width: 416rem;
+        height: max-content;
+        background: var(--color-white);
+        padding: 24rem;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        border-radius: 8px;
+
+        @include maxWidth($sm) {
+            width: 100%;
+        }
+
+        &-title {
+            font-weight: 700;
+        }
+
+        &-wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-category {
+            color: var(--color-secondary-1);
+            margin-bottom: 12rem;
+        }
+
+        &-btn {
+            width: 100%;
+            height: 59rem;
+        }
+    }
+}
+
+.slider {
+    width: 100%;
+
+    /* Remove Arrows/Spinners */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    &-container {
+        width: 100%;
+        height: 8rem;
+        position: relative;
+        background: var(--color-gray-400);
+        border-radius: 5px;
+
+        .price-slider {
+            height: 100%;
+            left: 25%;
+            right: 15%;
+            position: absolute;
+            border-radius: 5px;
+            background: var(--color-primary-1);
+        }
+    }
+
+    .range-input {
+        position: relative;
+
+        input {
+            position: absolute;
+            width: 100%;
+            height: 8rem;
+            background: none;
+            top: -8rem;
+            pointer-events: none;
+            cursor: pointer;
+            -webkit-appearance: none;
+        }
+
+        /* Styles for the range thumb in WebKit browsers */
+        input[type="range"]::-webkit-slider-thumb {
+            height: 20rem;
+            width: 20rem;
+            border-radius: 70%;
+            background: var(--color-primary-1);
+            pointer-events: auto;
+            -webkit-appearance: none;
+        }
+    }
+
+    .price {
+        &-input {
+            width: 100%;
+            display: flex;
+            gap: 16rem;
+            margin-top: 16rem;
+        }
+
+        &-field {
+            label {
+                display: block;
+                margin-bottom: 8rem;
+                color: var(--color-gray-700);
+            }
+
+            input {
+                width: 176rem;
+                height: 49rem;
+                padding: 16rem 12rem;
+                border-radius: 4px;
+                border: 1px solid var(--color-gray-400);
+                color: var(--color-gray-700);
+                background: var(--color-white);
+                font-family: var(--font-family-secondary);
+
+                @include maxWidth($sm) {
+                    width: 118rem;
+                }
+            }
+        }
+    }
+}
+
+.custom-checkbox-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.custom-checkbox input[type="checkbox"] {
+    display: none;
+}
+.custom-checkbox {
+    color: var(--color-black);
+}
+
+.custom-checkbox .checkmark {
+    width: 20rem;
+    height: 20rem;
+    border: 2px solid var(--color-gray-500);
+    display: inline-block;
+    margin-right: 12rem;
+    vertical-align: middle;
+    position: relative;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .checkmark {
+    border-color: #191919;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    left: 5rem;
+    width: 7rem;
+    height: 12rem;
+    border: solid #191919;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+@include maxWidth($sm) {
+    .products {
+        &-list {
+            .products-item {
+                flex-direction: column;
+                &-media {
+                    margin-bottom: 0;
+                }
+                &-image {
+                    width: 312rem;
+                    height: 224rem;
+                }
+                &-desc {
+                    padding: 0 8rem;
+                }
+                &-title {
+                    font: var(--font-h3-mobile);
+                }
+                &-text {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}

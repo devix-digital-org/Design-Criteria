@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        />
+        <title>Design Criteria | Iot remote</title>
+
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
+
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="msapplication-navbutton-color" content="#ffffff" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff" />
+
+        <link
+            rel="preload"
+            href="fonts/Inter-Regular.woff"
+            as="font"
+            type="font/woff"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="preload"
+            href="fonts/Inter-Regular.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="preload"
+            href="fonts/Inter-Medium.woff"
+            as="font"
+            type="font/woff"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="preload"
+            href="fonts/Inter-Medium.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="preload"
+            href="fonts/Inter-Bold.woff"
+            as="font"
+            type="font/woff"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="preload"
+            href="fonts/Inter-Bold.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <main class="wrapper" id="wrapper">
+            <header class="header" id="header">
+    <div class="header-panel">
+        <div class="header-panel-logo">
+            <a href="index.html" class="logo">
+                <img class="white-logo" src="img/logo.svg" alt="logo Design Criteria" />
+
+                <img class="dark-logo" src="img/logo-dark.svg" alt="logo Design Criteria" />
+            </a>
+        </div>
+        <div class="header-panel-nav">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html#about" class="scroll-action" data-router-disabled
+                            >About Us</a
+                        >
+                    </li>
+                    <li>
+                        <a href="products.html" class="nav-link">Products</a>
+                    </li>
+                    <li><a href="metal.html" class="nav-link">MM Pro</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li>
+                        <a href="cart.html" class="nav-link nav-link-icon">
+                            <img
+                                class="white-logo nav-link-logo"
+                                src="img/icons/shopping-bag-white.svg"
+                                alt="Cart logo"
+                            />
+                            <img
+                                class="dark-logo nav-link-logo"
+                                src="img/icons/shopping-bag.svg"
+                                alt="Cart logo"
+                            />
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <button type="button" class="header-panel-search">
+                <img class="white-logo" src="img/icons/search.svg" alt="search icon" />
+                <img class="dark-logo" src="img/icons/search-dark.svg" alt="search icon" />
+            </button>
+            <button type="button" class="btn btn-primary" data-modal-open="#contact-modal">
+                contact us
+            </button>
+            <button class="burger header-panel-burger"><span></span></button>
+        </div>
+    </div>
+    <div class="header-panel-overlay"></div>
+    <div class="header-search">
+        <div class="container">
+            <div class="header-search-form">
+                <form>
+                    <label>
+                        <input
+                            type="text"
+                            placeholder="Search"
+                            class="search-field"
+                            id="searchItem"
+                            autocomplete="off"
+                        />
+                    </label>
+                </form>
+            </div>
+            <div class="header-search-result">
+                <ul class="header-search-list">
+                    <li><a href="#">Magnetics Lorem ipsum dolor sit amet consectetur.</a></li>
+                    <li><a href="#">IoT Lorem ipsum dolor sit amet consectetur.</a></li>
+                    <li><a href="#">Power Supplies Lorem ipsum dolor sit amet consectetur.</a></li>
+                </ul>
+            </div>
+            <div class="search-not-found" style="display: none">
+                <h6>No results found for “<span class="search-value"></span>”</h6>
+                <p>Check the spelling or use a different word or phrase.</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+            <div data-router-wrapper>
+                <div data-router-view="default">
+                    <section class="section product">
+    <!-- for test header theme -->
+    <div data-theme="dark"></div>
+
+    <div class="container">
+        <div class="product-wrapper">
+            <div class="product-carousel" data-load-order="3">
+                <div id="main-carousel" class="splide">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide" data-modal-open="#carousel-modal">
+                                <picture><source srcset="../../img/products/Image2.webp" type="image/webp"><img src="../../img/products/Image2.jpg" alt="" /></picture>
+                            </li>
+                            <li class="splide__slide" data-modal-open="#carousel-modal">
+                                <picture><source srcset="../../img/products/Image3.webp" type="image/webp"><img src="../../img/products/Image3.jpg" alt="" /></picture>
+                            </li>
+                            <li class="splide__slide" data-modal-open="#carousel-modal">
+                                <picture><source srcset="../../img/products/Image4.webp" type="image/webp"><img src="../../img/products/Image4.jpg" alt="" /></picture>
+                            </li>
+                            <li class="splide__slide" data-modal-open="#carousel-modal">
+                                <picture><source srcset="../../img/products/Image5.webp" type="image/webp"><img src="../../img/products/Image5.jpg" alt="" /></picture>
+                            </li>
+                            <li class="splide__slide" data-modal-open="#carousel-modal">
+                                <picture><source srcset="../../img/products/Image2.webp" type="image/webp"><img src="../../img/products/Image2.jpg" alt="" /></picture>
+                            </li>
+                            <li class="splide__slide" data-modal-open="#carousel-modal">
+                                <picture><source srcset="../../img/products/Image4.webp" type="image/webp"><img src="../../img/products/Image4.jpg" alt="" /></picture>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="thumbnail-carousel" class="splide">
+                    <div class="splide__track">
+                        <ul class="splide__list"></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="product-info" data-load-order="3">
+                <div class="product-breadcrumbs">
+                    <a href="products.html">Products</a>
+                    <img src="../../img/icons/ellipse.svg" alt="" />
+                    <p>Metal Marshmallow Pro</p>
+                </div>
+                <h1 class="h1">Metal Marshmallow Pro</h1>
+                <p>
+                    Metal Marshmallow Pro excels as the top contact mic due to its unmatched sound
+                    sensitivity and ability to capture vibrations from any surface.
+                </p>
+                <p>
+                    To discover more about the MMP and see it in action,
+                    <a class="product-info-link" href="">click the link here.</a>
+                </p>
+                <div class="product-info-note">
+                    <img src="../../img/icons/exclamation.svg" alt="exclamation icon" />
+                    <p class="h6">
+                        Note:
+                        <span>
+                            This mic requires additional hardware to operate. It must be plugged
+                            into a device that provides +48V Phantom Power (not included).
+                        </span>
+                    </p>
+                </div>
+                <h4 class="h4 product-info-price">$159.00</h4>
+                <div class="product-info-bottom">
+                    <div class="product-info-quantity update-quantity">
+                        <img class="qty-minus" src="../../img/cart/tabler_minus.svg" alt="icon" />
+                        <input type="number" value="1" min="1" readonly />
+                        <img class="qty-plus" src="../../img/cart/tabler_plus.svg" alt="icon" />
+                    </div>
+                    <button type="button" class="btn btn-secondary">Proceed to checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+                    <section class="section characteristics">
+    <div class="container">
+        <div class="characteristics-wrapper" data-load-order="4">
+            <h3 class="h3 characteristics-title">Characteristics</h3>
+            <div class="characteristics-info">
+                <div class="characteristics-info-container">
+                    <div class="characteristics-info-item">
+                        <div class="characteristics-info-title">
+                            <h6 class="h6">Connector</h6>
+                            <img src="../../img/icons/arrow-down.svg" alt="arrow icon" />
+                        </div>
+                        <p class="characteristics-info-text">3-pin male XLR audio connector</p>
+                    </div>
+                    <div class="characteristics-divider"></div>
+                    <div class="characteristics-info-item">
+                        <div class="characteristics-info-title">
+                            <h6 class="h6">Cable Length</h6>
+                            <img src="../../img/icons/arrow-down.svg" alt="arrow icon" />
+                        </div>
+                        <p class="characteristics-info-text">6 feet</p>
+                    </div>
+                    <div class="characteristics-divider"></div>
+                    <div class="characteristics-info-item">
+                        <div class="characteristics-info-title">
+                            <h6 class="h6">Size</h6>
+                            <img src="../../img/icons/arrow-down.svg" alt="arrow icon" />
+                        </div>
+                        <p class="characteristics-info-text">33 x 23 mm (Metal Part)</p>
+                    </div>
+                    <div class="characteristics-divider"></div>
+                    <div class="characteristics-info-item">
+                        <div class="characteristics-info-title">
+                            <h6 class="h6">Weight</h6>
+                            <img src="../../img/icons/arrow-down.svg" alt="arrow icon" />
+                        </div>
+                        <p class="characteristics-info-text">5oz (142g)</p>
+                    </div>
+                    <div class="characteristics-divider"></div>
+                    <div class="characteristics-info-item">
+                        <div class="characteristics-info-title">
+                            <h6 class="h6">Gain</h6>
+                            <img src="../../img/icons/arrow-down.svg" alt="arrow icon" />
+                        </div>
+                        <p class="characteristics-info-text">Adjustable from 0 to 34 dB</p>
+                    </div>
+                </div>
+                <div class="characteristics-info-container">
+                    <div class="characteristics-info-item">
+                        <div class="characteristics-info-title">
+                            <h6 class="h6">Power</h6>
+                            <img src="../../img/icons/arrow-down.svg" alt="arrow icon" />
+                        </div>
+                        <p class="characteristics-info-text">+48V Phantom Powered</p>
+                    </div>
+                    <div class="characteristics-divider"></div>
+                    <div class="characteristics-info-item">
+                        <div class="characteristics-info-title">
+                            <h6 class="h6">Noise Level</h6>
+                            <img src="../../img/icons/arrow-down.svg" alt="arrow icon" />
+                        </div>
+                        <p class="characteristics-info-text">Very low even at high gain</p>
+                    </div>
+                    <div class="characteristics-divider"></div>
+                    <div class="characteristics-info-item">
+                        <div class="characteristics-info-title">
+                            <h6 class="h6">Output</h6>
+                            <img src="../../img/icons/arrow-down.svg" alt="arrow icon" />
+                        </div>
+                        <p class="characteristics-info-text">Balanced</p>
+                    </div>
+                    <div class="characteristics-divider"></div>
+                    <div class="characteristics-info-item">
+                        <div class="characteristics-info-title">
+                            <h6 class="h6">Preamp</h6>
+                            <img src="../../img/icons/arrow-down.svg" alt="arrow icon" />
+                        </div>
+                        <p class="characteristics-info-text">
+                            Internal, completely redesigned relative to Metal Marshmallow II
+                        </p>
+                    </div>
+                    <div class="characteristics-divider"></div>
+                    <div class="characteristics-info-item">
+                        <div class="characteristics-info-title">
+                            <h6 class="h6">Additional Information</h6>
+                            <img src="../../img/icons/arrow-down.svg" alt="arrow icon" />
+                        </div>
+                        <p class="characteristics-info-text">
+                            Inbound link it to our MMP blog page that talks more about it.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+                    <section class="section related">
+    <div class="container">
+        <div class="related-wrapper">
+            <h2 class="h2 related-title">Related Items</h2>
+            <div class="related-cards-list">
+                <div class="related-card" data-aos="fade-up">
+                    <img
+                        class="related-card-image"
+                        src="../../img/products/Image.png"
+                        alt="product`s photo"
+                    />
+                    <div class="related-card-info">
+                        <h5 class="h5 related-card-title">Planar Transformers</h5>
+                        <p class="related-card-text">
+                            Planar transformers have many advantages including high power density
+                            due to its compact size, smaller winding area, less alternating current
+                            winding resistance, and reduced inductance leakage.
+                        </p>
+                        <div class="related-card-bottom">
+                            <div class="related-card-price">
+                                <div class="price-wrapper">
+                                    <h5 class="h5">$1,000.00</h5>
+                                    <span>$2,000.00</span>
+                                </div>
+                            </div>
+                            <button
+                                type="button"
+                                class="btn btn-secondary"
+                                data-modal-open="#contact-modal"
+                            >
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="related-card" data-aos="fade-up">
+                    <img
+                        class="related-card-image"
+                        src="../../img/products/Image.png"
+                        alt="product`s photo"
+                    />
+                    <div class="related-card-info">
+                        <h5 class="h5 related-card-title">Planar Transformers</h5>
+                        <p class="related-card-text">
+                            Planar transformers have many advantages including high power density
+                            due to its compact size, smaller winding area, less alternating current
+                            winding resistance, and reduced inductance leakage.
+                        </p>
+                        <div class="related-card-bottom">
+                            <div class="related-card-price">
+                                <div class="price-wrapper">
+                                    <h5 class="h5">$1,000.00</h5>
+                                    <span>$2,000.00</span>
+                                </div>
+                            </div>
+                            <button
+                                type="button"
+                                class="btn btn-secondary"
+                                data-modal-open="#contact-modal"
+                            >
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="related-card" data-aos="fade-up">
+                    <img
+                        class="related-card-image"
+                        src="../../img/products/Image.png"
+                        alt="product`s photo"
+                    />
+                    <div class="related-card-info">
+                        <h5 class="h5 related-card-title">Planar Transformers</h5>
+                        <p class="related-card-text">
+                            Planar transformers have many advantages including high power density
+                            due to its compact size, smaller winding area, less alternating current
+                            winding resistance, and reduced inductance leakage.
+                        </p>
+                        <div class="related-card-bottom">
+                            <div class="related-card-price">
+                                <div class="price-wrapper">
+                                    <h5 class="h5">$1,000.00</h5>
+                                    <span>$2,000.00</span>
+                                </div>
+                            </div>
+                            <button
+                                type="button"
+                                class="btn btn-secondary"
+                                data-modal-open="#contact-modal"
+                            >
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+                    <section class="section contact" style="background-image: url('../../img/home/contact-bg.jpg')">
+    <div class="container">
+        <div class="title-section" data-aos="fade-up">
+            <div class="h6">Ready to find out more?</div>
+            <h2>Build The Future With Us</h2>
+            <p>
+                Collaborate, Create, and Shape Tomorrow: Contact us to develop high-tech circuits
+                and hardware.
+            </p>
+        </div>
+        <div class="link-section" data-aos="fade-up">
+            <button type="button" class="btn btn-secondary" data-modal-open="#contact-modal">
+                contact us
+            </button>
+        </div>
+    </div>
+</section>
+
+                </div>
+            </div>
+            <footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-logo">
+                <a href="index.html"><img src="../img/logo.svg" alt="logo" /></a>
+            </div>
+            <div class="footer-info">
+                <div class="footer-item">
+                    <div class="footer-title">Contact us</div>
+                    <ul class="footer-list">
+                        <li><a href="tel:8013931414" target="_blank">(801) 393-1414</a></li>
+                    </ul>
+                </div>
+                <div class="footer-item">
+                    <div class="footer-title">Address</div>
+                    <ul class="footer-list">
+                        <li>
+                            1821 W 4000 S, Roy, <br />
+                            UT 84067, USA
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-item">
+                    <div class="footer-title">Email</div>
+                    <ul class="footer-list">
+                        <li>
+                            <a href="mailto:power@designcriteria.com" target="_blank"
+                                >power@designcriteria.com</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-nav">
+                <div class="footer-item">
+                    <div class="footer-title">Product</div>
+                    <ul class="footer-list">
+                        <li><a href="power-supplies.html" class="nav-link">Power Supplies</a></li>
+                        <li><a href="magnetics.html" class="nav-link">Magnetics</a></li>
+                        <li><a href="iot-remote.html" class="nav-link">IoT Remote Sensors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-item">
+                    <div class="footer-title">Info</div>
+                    <ul class="footer-list">
+                        <li>
+                            <a href="index.html#about" class="scroll-action" data-router-disabled
+                                >About Us</a
+                            >
+                        </li>
+                        <li><a href="metal.html" class="nav-link">MM Pro</a></li>
+                        <li><a href="blog.html" class="nav-link">Blog</a></li>
+                        <li><a href="#" data-modal-open="#contact-modal">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <ul class="footer-social">
+                <li>
+                    <a href="#" target="_blank" class="footer-social-link"
+                        ><img src="../img/icons/ln.svg" alt="ln"
+                    /></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" class="footer-social-link"
+                        ><img src="../img/icons/yb.svg" alt="yt"
+                    /></a>
+                </li>
+            </ul>
+            <ul class="footer-bottom-nav">
+                <li>© 2023 Design Criteria, Inc.</li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+            <div class="footer-made">
+                <a href="#" target="_blank"><img src="../img/logo-mini.svg" alt="presto" /></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+            <div class="modal" id="contact-modal">
+    <div class="modal-bg"></div>
+    <div class="modal-close" data-modal-close="#contact-modal"></div>
+    <div class="modal-box" data-lenis-prevent>
+        <div class="modal-box-item">
+            <div class="contact-modal">
+                <div class="contact-modal-top">
+                    <h6 class="h6">Use this form to describe your project</h6>
+                    <div class="modal-close-btn" data-modal-close="#contact-modal">
+                        <svg><use xlink:href="img/icons/icons.svg#close"></use></svg>
+                    </div>
+                </div>
+                <div class="contact-modal-form">
+                    <form>
+                        <p class="contact-modal-inner">
+                            Hi, my name is
+                            <label class="field"
+                                ><input
+                                    type="text"
+                                    placeholder="John Smith"
+                                    class="field-item"
+                                    required /></label
+                            >. You can answer me on this email
+                            <label class="field">
+                                <input
+                                    type="email"
+                                    placeholder="email@box.com"
+                                    class="field-item"
+                                    required
+                                />
+                                .
+                            </label>
+                            I am looking for help with a
+                            <label class="field field-select">
+                                <select class="field-item">
+                                    <option value="Power Supplies">Power Supplies</option>
+                                    <option value="Power Supplies">Power Supplies</option>
+                                    <option value="Power Supplies">Power Supplies</option>
+                                    <option value="Power Supplies">Power Supplies</option>
+                                </select>
+                            </label>
+                            .
+                        </p>
+                        <p class="contact-message-inner">
+                            Message
+                            <label class="field">
+                                <span class="field-resize"></span>
+                                <textarea
+                                    placeholder="Type your message..."
+                                    class="field-item"
+                                    required
+                                ></textarea>
+                            </label>
+                        </p>
+                        <button class="btn btn-secondary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <div class="modal" id="thanks">
+	<div class="modal-bg"></div>
+	<div class="modal-close" data-modal-close="#thanks"></div>
+	<div class="modal-box" data-lenis-prevent>
+		<div class="modal-box-item">
+			<div class="thanks">
+				<div class="thanks-top">
+					<h6 class="h6">Use this form to describe your project</h6>
+					<div class="modal-close-btn" data-modal-close="#contact-modal">
+						<svg><use xlink:href="img/icons/icons.svg#close"></use></svg>
+					</div>
+				</div>
+				<div class="thanks-content">
+					<h2 class="h2 thanks-content-title">
+						Thank you! <br> Your submission has <br> been received!
+					</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+            <div id="carousel-modal" class="modal">
+    <div class="modal-bg"></div>
+    <div class="modal-close" data-modal-close="#carousel-modal"></div>
+    <div class="modal-box" data-lenis-prevent>
+        <div class="modal-box-item">
+            <div class="modal-top">
+                <div class="modal-close-btn" data-modal-close="#carousel-modal">
+                    <svg><use xlink:href="img/icons/icons.svg#close"></use></svg>
+                </div>
+            </div>
+
+            <div class="product-carousel">
+                <div id="modal-carousel-main" class="splide">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide" data-modal-open="#carousel-modal">
+                                <picture><source srcset="../../img/products/Image2.webp" type="image/webp"><img src="../../img/products/Image2.jpg" alt="" /></picture>
+                            </li>
+                            <li class="splide__slide">
+                                <picture><source srcset="../../img/products/Image3.webp" type="image/webp"><img src="../../img/products/Image3.jpg" alt="" /></picture>
+                            </li>
+                            <li class="splide__slide">
+                                <picture><source srcset="../../img/products/Image4.webp" type="image/webp"><img src="../../img/products/Image4.jpg" alt="" /></picture>
+                            </li>
+                            <li class="splide__slide">
+                                <picture><source srcset="../../img/products/Image5.webp" type="image/webp"><img src="../../img/products/Image5.jpg" alt="" /></picture>
+                            </li>
+                            <li class="splide__slide">
+                                <picture><source srcset="../../img/products/Image2.webp" type="image/webp"><img src="../../img/products/Image2.jpg" alt="" /></picture>
+                            </li>
+                            <li class="splide__slide">
+                                <picture><source srcset="../../img/products/Image4.webp" type="image/webp"><img src="../../img/products/Image4.jpg" alt="" /></picture>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="modal-carousel" class="splide">
+                    <div class="splide__track">
+                        <ul class="splide__list"></ul>
+                    </div>
+                </div>
+            </div>
+            <button id="fullscreen-btn">⛶</button>
+        </div>
+    </div>
+</div>
+
+        </main>
+        <script src="js/app.min.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({})
+        </script>
+    </body>
+</html>

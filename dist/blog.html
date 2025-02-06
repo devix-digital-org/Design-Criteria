@@ -78,88 +78,25 @@
                             >About Us</a
                         >
                     </li>
-                    <li class="menu-item-has-children">
-                        <p>Products</p>
-                        <ul class="sub-menu">
-                            <li>
-                                <a href="power-supplies.html" class="nav-link">
-                                    <span class="sub-item-image">
-                                        <picture>
-                                            <source
-                                                srcset="img/home/solution-1.webp"
-                                                type="image/webp"
-                                            />
-                                            <source
-                                                srcset="img/home/solution-1.png"
-                                                type="image/png"
-                                            />
-                                            <img
-                                                src="img/home/solution-1.png"
-                                                alt="solution image"
-                                            />
-                                        </picture>
-                                    </span>
-                                    <span class="sub-item-title">Power Supplies</span>
-                                    <span class="sub-item-text"
-                                        >Design Criteria, Inc. is the only manufacture of exclusive,
-                                        SMART power supplies for demanding applications.</span
-                                    >
-                                </a>
-                            </li>
-                            <li>
-                                <a href="magnetics.html" class="nav-link">
-                                    <span class="sub-item-image">
-                                        <picture>
-                                            <source
-                                                srcset="img/home/solution-2.webp"
-                                                type="image/webp"
-                                            />
-                                            <source
-                                                srcset="img/home/solution-2.png"
-                                                type="image/png"
-                                            />
-                                            <img
-                                                src="img/home/solution-2.png"
-                                                alt="solution image"
-                                            />
-                                        </picture>
-                                    </span>
-                                    <span class="sub-item-title">Magnetics</span>
-                                    <span class="sub-item-text"
-                                        >Design Criteria, Inc. pioneers diverse switching power
-                                        supply components.</span
-                                    >
-                                </a>
-                            </li>
-                            <li>
-                                <a href="iot-remote.html" class="nav-link">
-                                    <span class="sub-item-image">
-                                        <picture>
-                                            <source
-                                                srcset="img/home/solution-3.webp"
-                                                type="image/webp"
-                                            />
-                                            <source
-                                                srcset="img/home/solution-3.png"
-                                                type="image/png"
-                                            />
-                                            <img
-                                                src="img/home/solution-3.png"
-                                                alt="solution image"
-                                            />
-                                        </picture>
-                                    </span>
-                                    <span class="sub-item-title">IoT Remote Sensors</span>
-                                    <span class="sub-item-text"
-                                        >We design and manufacture remote sensors for IoT
-                                        applications for smart homes and smart businesses.</span
-                                    >
-                                </a>
-                            </li>
-                        </ul>
+                    <li>
+                        <a href="products.html" class="nav-link">Products</a>
                     </li>
                     <li><a href="metal.html" class="nav-link">MM Pro</a></li>
                     <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li>
+                        <a href="cart.html" class="nav-link nav-link-icon">
+                            <img
+                                class="white-logo nav-link-logo"
+                                src="img/icons/shopping-bag-white.svg"
+                                alt="Cart logo"
+                            />
+                            <img
+                                class="dark-logo nav-link-logo"
+                                src="img/icons/shopping-bag.svg"
+                                alt="Cart logo"
+                            />
+                        </a>
+                    </li>
                 </ul>
             </nav>
             <button type="button" class="header-panel-search">
@@ -643,54 +580,67 @@
 </footer>
 
             <div class="modal" id="contact-modal">
-	<div class="modal-bg"></div>
-	<div class="modal-close" data-modal-close="#contact-modal"></div>
-	<div class="modal-box" data-lenis-prevent>
-		<div class="modal-box-item">
-			<div class="contact-modal">
-				<div class="contact-modal-top">
-					<h6 class="h6">Use this form to describe your project</h6>
-					<div class="modal-close-btn" data-modal-close="#contact-modal">
-						<svg><use xlink:href="img/icons/icons.svg#close"></use></svg>
-					</div>
-				</div>
-				<div class="contact-modal-form">
-					<form>
-						<p class="contact-modal-inner">
-							Hi, my name is
-						<label class="field"><input type="text" placeholder="John Smith" class="field-item" required /></label>. You can
-							answer me on this email
-							<label class="field">
-								<input type="email" placeholder="email@box.com" class="field-item" required />
-								.
-							</label>
-							I am looking for help with a
-							<label class="field field-select">
-								<select class="field-item">
-									<option value="Power Supplies">Power Supplies</option>
-									<option value="Power Supplies">Power Supplies</option>
-									<option value="Power Supplies">Power Supplies</option>
-									<option value="Power Supplies">Power Supplies</option>
-								</select>
-							</label>
-							.
-						</p>
-						<p class="contact-message-inner">
-							Message
-						<label class="field">
-							<span class="field-resize"></span>
-							<textarea placeholder="Type your message..." class="field-item" required></textarea>
-						</label>
-						</p>
-						<button class="btn btn-secondary">
-							Submit
-						</button>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="modal-bg"></div>
+    <div class="modal-close" data-modal-close="#contact-modal"></div>
+    <div class="modal-box" data-lenis-prevent>
+        <div class="modal-box-item">
+            <div class="contact-modal">
+                <div class="contact-modal-top">
+                    <h6 class="h6">Use this form to describe your project</h6>
+                    <div class="modal-close-btn" data-modal-close="#contact-modal">
+                        <svg><use xlink:href="img/icons/icons.svg#close"></use></svg>
+                    </div>
+                </div>
+                <div class="contact-modal-form">
+                    <form>
+                        <p class="contact-modal-inner">
+                            Hi, my name is
+                            <label class="field"
+                                ><input
+                                    type="text"
+                                    placeholder="John Smith"
+                                    class="field-item"
+                                    required /></label
+                            >. You can answer me on this email
+                            <label class="field">
+                                <input
+                                    type="email"
+                                    placeholder="email@box.com"
+                                    class="field-item"
+                                    required
+                                />
+                                .
+                            </label>
+                            I am looking for help with a
+                            <label class="field field-select">
+                                <select class="field-item">
+                                    <option value="Power Supplies">Power Supplies</option>
+                                    <option value="Power Supplies">Power Supplies</option>
+                                    <option value="Power Supplies">Power Supplies</option>
+                                    <option value="Power Supplies">Power Supplies</option>
+                                </select>
+                            </label>
+                            .
+                        </p>
+                        <p class="contact-message-inner">
+                            Message
+                            <label class="field">
+                                <span class="field-resize"></span>
+                                <textarea
+                                    placeholder="Type your message..."
+                                    class="field-item"
+                                    required
+                                ></textarea>
+                            </label>
+                        </p>
+                        <button class="btn btn-secondary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
             <div class="modal" id="thanks">
 	<div class="modal-bg"></div>
 	<div class="modal-close" data-modal-close="#thanks"></div>

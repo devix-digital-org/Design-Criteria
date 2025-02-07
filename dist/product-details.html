@@ -212,7 +212,7 @@
                         <input type="number" value="1" min="1" readonly />
                         <img class="qty-plus" src="../../img/cart/tabler_plus.svg" alt="icon" />
                     </div>
-                    <button type="button" class="btn btn-secondary">Proceed to checkout</button>
+                    <button type="button" class="btn btn-secondary">Add to cart</button>
                 </div>
             </div>
         </div>
@@ -601,17 +601,15 @@
 	</div>
 </div>
             <div id="carousel-modal" class="modal">
-    <div class="modal-bg"></div>
-    <div class="modal-close" data-modal-close="#carousel-modal"></div>
     <div class="modal-box" data-lenis-prevent>
-        <div class="modal-box-item">
-            <div class="modal-top">
-                <div class="modal-close-btn" data-modal-close="#carousel-modal">
-                    <svg><use xlink:href="img/icons/icons.svg#close"></use></svg>
-                </div>
+        <div class="modal-top">
+            <img id="fullscreen-btn" src="../../img/icons/border-corners.svg" alt="" />
+            <div class="modal-close-btn" data-modal-close="#carousel-modal">
+                <svg><use xlink:href="img/icons/icons.svg#close"></use></svg>
             </div>
-
-            <div class="product-carousel">
+        </div>
+        <div class="modal-box-item">
+            <div class="modal-carousels">
                 <div id="modal-carousel-main" class="splide">
                     <div class="splide__track">
                         <ul class="splide__list">
@@ -636,13 +634,12 @@
                         </ul>
                     </div>
                 </div>
-                <div id="modal-carousel" class="splide">
+                <div id="modal-carousel-thumbnail" class="splide">
                     <div class="splide__track">
                         <ul class="splide__list"></ul>
                     </div>
                 </div>
             </div>
-            <button id="fullscreen-btn">⛶</button>
         </div>
     </div>
 </div>

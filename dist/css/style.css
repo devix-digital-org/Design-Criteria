@@ -2185,6 +2185,8 @@ svg {
 
 .header-panel-nav ul li .nav-link-icon {
   padding: 18rem 26rem;
+  display: flex;
+  align-items: center;
   height: 100%;
 }
 
@@ -4953,6 +4955,11 @@ svg {
 .products-list .products-item-text {
   max-width: 100%;
   margin-bottom: 40rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .products-list .products-item-bottom {
@@ -5565,37 +5572,31 @@ svg {
      object-fit: cover;
 }
 
-.product-carousel #thumbnail-carousel,
-.product-carousel #modal-carousel {
+.product-carousel #thumbnail-carousel {
   margin-top: 16px;
 }
 
-.product-carousel #thumbnail-carousel .splide__track,
-.product-carousel #modal-carousel .splide__track {
+.product-carousel #thumbnail-carousel .splide__track {
   width: calc(100% - 90rem) !important;
   margin: auto;
 }
 
-.product-carousel #thumbnail-carousel .splide__slide,
-.product-carousel #modal-carousel .splide__slide {
+.product-carousel #thumbnail-carousel .splide__slide {
   width: 90rem !important;
   height: 90rem;
   border-radius: 8px;
   overflow: hidden;
 }
 
-.product-carousel #thumbnail-carousel .splide__slide.is-active,
-.product-carousel #modal-carousel .splide__slide.is-active {
+.product-carousel #thumbnail-carousel .splide__slide.is-active {
   border: 2px solid var(--color-primary-1);
 }
 
-.product-carousel #thumbnail-carousel .splide__arrow,
-.product-carousel #modal-carousel .splide__arrow {
+.product-carousel #thumbnail-carousel .splide__arrow {
   background: transparent;
 }
 
-.product-carousel #thumbnail-carousel .splide__arrow svg,
-.product-carousel #modal-carousel .splide__arrow svg {
+.product-carousel #thumbnail-carousel .splide__arrow svg {
   width: 32rem;
   height: 32rem;
 }
@@ -6397,6 +6398,114 @@ svg {
 
 .contact-message-inner .field {
   margin: 14rem 0 0;
+}
+
+#carousel-modal .modal-top {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 14rem;
+  width: 100%;
+  height: 71rem;
+  background-color: var(--color-gray-800);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2470588235);
+}
+
+#carousel-modal .modal-top .modal-close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80rem;
+  height: 100%;
+  border-left: 1px solid rgba(255, 255, 255, 0.2470588235);
+}
+
+#carousel-modal .modal-top .modal-close-btn svg {
+  width: 22rem;
+  height: 22rem;
+}
+
+#carousel-modal .modal-top img {
+  cursor: pointer;
+}
+
+#carousel-modal .modal-box {
+  display: flex;
+  flex-direction: column;
+  pointer-events: all;
+}
+
+#carousel-modal .modal-box-item {
+  background-color: var(--color-gray-800);
+  max-width: 100%;
+}
+
+#carousel-modal .modal-box .modal-carousels {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 134rem;
+  height: 100%;
+}
+
+#carousel-modal #modal-carousel-main {
+  width: 1088rem;
+}
+
+#carousel-modal #modal-carousel-main .splide__list {
+  width: 640rem;
+  margin: auto !important;
+}
+
+#carousel-modal #modal-carousel-main .splide__slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+#carousel-modal #modal-carousel-main .splide__arrow {
+  width: 64rem;
+  height: 90rem;
+  border-radius: 4px;
+}
+
+#carousel-modal #modal-carousel-main .splide__arrow svg {
+  width: 24rem;
+  height: 24rem;
+  fill: #fff;
+}
+
+#carousel-modal #modal-carousel-thumbnail {
+  display: flex;
+  align-items: center;
+}
+
+#carousel-modal #modal-carousel-thumbnail .splide__list {
+  height: 560rem;
+}
+
+#carousel-modal #modal-carousel-thumbnail .splide__slide {
+  width: 90rem !important;
+  height: 90rem !important;
+  border-radius: 8px;
+  overflow: hidden;
+  transform: translateX(0) !important;
+}
+
+#carousel-modal #modal-carousel-thumbnail .splide__slide.is-active {
+  border: 2px solid var(--color-primary-1);
+}
+
+#carousel-modal #modal-carousel-thumbnail .splide__arrow {
+  background: transparent;
+}
+
+#carousel-modal #modal-carousel-thumbnail .splide__arrow svg {
+  width: 24rem;
+  height: 24rem;
+  fill: #fff;
 }
 
 @media (min-width: 576px) {
@@ -10706,6 +10815,10 @@ svg {
 
   .products-list {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .products-list .products-item-text {
+    -webkit-line-clamp: 3;
   }
 
   .products-filter {

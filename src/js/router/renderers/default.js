@@ -2,7 +2,7 @@ import Highway from "@dogstudio/highway"
 import { loadContent } from "../../common/loadContent.js"
 import { initAccordion, initAccordionCore } from "../../modules/accordion/initAccordion.js"
 import { initHeroCarousel } from "../../modules/carousels/heroCarousel.js"
-import { initProductCarousel } from "../../modules/carousels/productCarousel.js"
+import { initProductsCarousel } from "../../modules/carousels/productsCarousel.js"
 import { initBlogNav } from "../../modules/blog/initBlogNav.js"
 import { initShare } from "../../modules/blog/initShare.js"
 import { scrollTo } from "../../common/scrollTo.js"
@@ -18,7 +18,7 @@ class DefaultRenderer extends Highway.Renderer {
         initBlogNav()
         initShare()
         initHeroCarousel()
-        initProductCarousel()
+        initProductsCarousel()
         initModalSearch()
         currentDate()
         rangeSlider()

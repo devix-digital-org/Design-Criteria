@@ -1,0 +1,109 @@
+#carousel-modal {
+    .modal {
+        &-top {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            gap: 14rem;
+            width: 100%;
+            height: 71rem;
+            background-color: var(--color-gray-800);
+            border-bottom: 1px solid #ffffff3f;
+
+            .modal-close-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 80rem;
+                height: 100%;
+                border-left: 1px solid #ffffff3f;
+
+                svg {
+                    width: 22rem;
+                    height: 22rem;
+                }
+            }
+
+            img {
+                cursor: pointer;
+            }
+        }
+
+        &-box {
+            display: flex;
+            flex-direction: column;
+            pointer-events: all;
+
+            &-item {
+                background-color: var(--color-gray-800);
+                max-width: 100%;
+            }
+
+            .modal-carousels {
+                display: flex;
+                flex-direction: row-reverse;
+                gap: 134rem;
+                height: 100%;
+            }
+        }
+    }
+
+    #modal-carousel-main {
+        width: 1088rem;
+
+        .splide__list {
+            width: 640rem;
+            margin: auto !important;
+        }
+
+        .splide__slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .splide__arrow {
+            width: 64rem;
+            height: 90rem;
+            border-radius: 4px;
+
+            svg {
+                width: 24rem;
+                height: 24rem;
+                fill: #fff;
+            }
+        }
+    }
+
+    #modal-carousel-thumbnail {
+        display: flex;
+        align-items: center;
+
+        .splide__list {
+            height: 560rem;
+        }
+
+        .splide__slide {
+            width: 90rem !important;
+            height: 90rem !important;
+            border-radius: 8px;
+            overflow: hidden;
+            transform: translateX(0) !important;
+        }
+
+        .splide__slide.is-active {
+            border: 2px solid var(--color-primary-1);
+        }
+        .splide__arrow {
+            background: transparent;
+
+            svg {
+                width: 24rem;
+                height: 24rem;
+                fill: #fff;
+            }
+        }
+    }
+}

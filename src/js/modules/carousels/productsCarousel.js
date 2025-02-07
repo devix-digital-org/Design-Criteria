@@ -1,10 +1,10 @@
 import Splide from "@splidejs/splide"
 
-export const initProductCarousel = () => {
+export const initProductsCarousel = () => {
     const mainCarousel = document.querySelector("#main-carousel")
     const thumbnailCarousel = document.querySelector("#thumbnail-carousel")
     const modalMainCarousel = document.querySelector("#modal-carousel-main")
-    const modalThumbnailCarousel = document.querySelector("#modal-carousel")
+    const modalThumbnailCarousel = document.querySelector("#modal-carousel-thumbnail")
     const fullscreenBtn = document.querySelector("#fullscreen-btn")
 
     if (!mainCarousel || !thumbnailCarousel) return
@@ -22,26 +22,30 @@ export const initProductCarousel = () => {
         })
     }
 
-    const initSplide = (main, thumb) => {
+    const initSplide = (main, thumb, optionsMain = {}, optionsThumb = {}) => {
         const mainSplide = new Splide(main, {
             type: "fade",
             rewind: true,
             pagination: false,
             arrows: false,
+            ...optionsMain,
         })
         const thumbSplide = new Splide(thumb, {
+            arrows: true,
             gap: 16,
             rewind: true,
             pagination: false,
             isNavigation: true,
+            ...optionsThumb,
         })
         mainSplide.sync(thumbSplide)
         mainSplide.mount()
         thumbSplide.mount()
+        return mainSplide
     }
 
     cloneSlides(mainCarouselList, thumbnailCarouselList)
-    initSplide(mainCarousel, thumbnailCarousel)
+    const mainSplide = initSplide(mainCarousel, thumbnailCarousel)
 
     if (modalMainCarousel && modalThumbnailCarousel) {
         const modalMainCarouselList = modalMainCarousel.querySelector(".splide__list")
@@ -49,7 +53,26 @@ export const initProductCarousel = () => {
 
         cloneSlides(mainCarouselList, modalMainCarouselList)
         cloneSlides(mainCarouselList, modalThumbnailCarouselList)
-        initSplide(modalMainCarousel, modalThumbnailCarousel)
+
+        const modalSplide = initSplide(
+            modalMainCarousel,
+            modalThumbnailCarousel,
+            { arrows: true },
+            {
+                direction: "ttb",
+                height: "auto",
+                wheel: true,
+                releaseWheel: true,
+            }
+        )
+
+        document.querySelectorAll("[data-modal-open='#carousel-modal']").forEach((slide, index) => {
+            slide.addEventListener("click", () => {
+                setTimeout(() => {
+                    modalSplide.go(index)
+                }, 0)
+            })
+        })
     }
 
     if (fullscreenBtn) {

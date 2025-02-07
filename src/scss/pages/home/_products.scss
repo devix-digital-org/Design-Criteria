@@ -103,6 +103,15 @@
             &-text {
                 max-width: 100%;
                 margin-bottom: 40rem;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                @include maxWidth($sm) {
+                    -webkit-line-clamp: 3;
+                }
             }
             &-bottom {
                 display: flex;
